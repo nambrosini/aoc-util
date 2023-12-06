@@ -6,6 +6,8 @@ authors = [
     "Nico"
 ]
 readme = "README.md"
+description = "Utilities function for aoc"
+license = "Apache-2.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
