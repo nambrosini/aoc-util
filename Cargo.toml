@@ -9,6 +9,6 @@ readme = "README.md"
 description = "Utilities function for aoc"
 license = "Apache-2.0"
 repository = "https://github.com/nambrosini/aoc-util/"
-
+license-file = "LICENSE"
 
 [dependencies]
