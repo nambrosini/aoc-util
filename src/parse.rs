@@ -72,13 +72,13 @@ impl ParseOps for &str {
 impl<T: Unsigned<T>> Iterator for ParseUnsigned<'_, T> {
     type Item = T;
 
+    fn next(&mut self) -> Option<Self::Item> {
+        try_unsigned(&mut self.bytes)
+    }
+
     fn size_hint(&self) -> (usize, Option<usize>) {
         let (lower, upper) = self.bytes.size_hint();
         (lower / 3, upper.map(|u| u / 3))
-    }
-
-    fn next(&mut self) -> Option<Self::Item> {
-        try_unsigned(&mut self.bytes)
     }
 }
 
