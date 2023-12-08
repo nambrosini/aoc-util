@@ -1,6 +1,6 @@
 use num_traits::{PrimInt, Signed, cast::AsPrimitive};
 
-fn mcd<T>(a: T, b: T) -> T
+pub fn mcd<T>(a: T, b: T) -> T
     where
         T: PrimInt + Signed,
 {
@@ -12,7 +12,7 @@ fn mcd<T>(a: T, b: T) -> T
     mcd(b, a % b)
 }
 
-fn mcm<T>(a: T, b: T) -> T
+pub fn mcm<T>(a: T, b: T) -> T
     where
         T: PrimInt + AsPrimitive<T> + Signed
 {
